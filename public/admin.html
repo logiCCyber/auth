@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Checkout example · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+  <body class="bg-dark text-light">
+
+    <!-- Контейнер для таблицы -->
+    <div class="container">
+      <main>
+        <div class="py-5 text-center">
+          <img class="d-block mx-auto mb-4" style="width: 250px; height: 150px;" src="https://raw.githubusercontent.com/logiCCyber/img/e20b86ba170c02133de3cc1b21c30b1c334b31d6/slogan.png" alt="">
+          <h2>Administrator</h2>
+          <p class="lead">In this section, you can manage employee data: register new employees, delete or update information, and view current records.</p>
+        </div>
+
+        <div class="row g-5 d-flex justify-content-center">
+          <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">November</h4>
+
+            <ul class="nav nav-tabs bg-dark" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Table</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Add</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Edit</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+    <table class="table table-dark table-striped .table-truncate" style="text-align: center">
+      <thead>
+        <tr class="text-info">
+          <th>№</th>
+          <th>Name</th>
+          <th>Job</th>
+          <th>Time</th>
+          <th>$</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td class="text-truncate" style="max-width: 40px;">Vanya</td>
+          <td class="text-truncate" style="max-width: 50px;">Elektric</td>
+          <td>35</td>
+          <td>21</td>
+          <td>$735</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="text-truncate" style="max-width: 40px;">Sharof</td>
+          <td class="text-truncate" style="max-width: 50px;">Engineer</td>
+          <td>31</td>
+          <td>25</td>
+          <td>$775</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <table class="table table-light table-striped .table-truncate" style="text-align: center">
+      <thead>
+        <tr class="text-warning">
+          <th>Vanya</th>
+        </tr>
+        <tr class="text-info">
+          <th>#</th>
+          <th>Date</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Total</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>11-15</td>
+          <td class="text-truncate" style="max-width: 40px;">08:35</td>
+          <td class="text-truncate" style="max-width: 50px;">15:20</td>
+          <td>7</td>
+          <td>$147</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>11-16</td>
+          <td class="text-truncate" style="max-width: 40px;">09:10</td>
+          <td class="text-truncate" style="max-width: 50px;">14:30</td>
+          <td>6</td>
+          <td>$775</td>
+        </tr>
+      </tbody>
+    </table> -->
+    <nav class="navbar bg-body-tertiary bg-dark border border-secondary">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light">Option</a>
+        <form class="d-flex flex-wrap w-100 gap-3 align-items-center" role="search">
+
+          <!-- Выбор из списка -->
+          <div class="flex-grow-1">
+            <select class="form-select bg-secondary border-dark text-light" class="job" required>
+              <option value="">Choose...</option>
+              <option>Vanya</option>
+              <option>Sharof</option>
+            </select>
+          </div>
+
+          <!-- Первый input с датой -->
+          <div class="flex-grow-1">
+            <input type="date" class="form-select  bg-secondary border-dark text-light">
+          </div>
+
+          <!-- Второй input с датой -->
+          <div class="flex-grow-1">
+            <input type="date" class="form-select  bg-secondary border-dark text-light">
+          </div>
+
+          <!-- Кнопка -->
+          <div>
+            <button class="btn btn-primary btn-lg bg-danger border-danger" data-bs-toggle="modal" data-bs-target="#iModal" type="submit">Found</button>
+          </div>
+
+        </form>
+      </div>
+    </nav>
+
+
+  </div>
+  <div class="tab-pane fade " id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+    <form class="needs-validation" novalidate>
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="firstName" class="form-label">Name</label>
+          <input type="text" class="form-control  bg-secondary text-light border-dark" id="firstName" placeholder="" value="" required>
+          <div class="invalid-feedback">
+            Valid name is required.
+          </div>
+        </div>
+
+        <div class="col-6">
+          <label for="username" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control  bg-secondary text-light border-dark" id="username" placeholder="Username" required>
+          <div class="invalid-feedback">
+              Your username is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="email" class="form-label">Password</label>
+          <input type="password" class="form-control  bg-secondary text-light border-dark" id="password" placeholder="Password">
+          <div class="invalid-feedback">
+            Please enter new password.
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="password" class="form-label">Confirm password</label>
+          <input type="password" class="form-control  bg-secondary text-light border-dark" id="confirm" placeholder="Confirm password" required>
+          <div class="invalid-feedback">
+            Please confir your password.
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <label for="country" class="form-label">Job title</label>
+          <select class="form-select  bg-secondary text-light border-dark" class="job" required>
+            <option value="">Choose...</option>
+            <option>Technic</option>
+            <option>Mechanic</option>
+            <option>Professional</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a your job title.
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="zip" class="form-label">Salary</label>
+          <input type="number" class="form-control  bg-secondary text-light border-dark" id="salary" placeholder="$0.00" required>
+        </div>
+
+        <div class="col-md-4">
+          <label for="image" class="form-label">Photo</label>
+          <input type="file" class="form-control d-block w-100  bg-secondary text-light border-dark" id="image" placeholder="$0.00" required>
+        </div>
+
+      </div>
+
+      <hr class="my-4">
+
+      <button class="w-100 btn btn-primary btn-lg bg-danger border-danger border-dark" type="submit">Registration</button>
+    </form>
+      <!-- <button class="w-100 btn btn-primary btn-lg bg-danger border-danger" type="submit">Registration</button> -->
+    </form>
+  </div>
+
+    <form class="needs-validation" novalidate>
+      <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+        <div class="col-md-5">
+          <label for="country" class="form-label">Employee</label>
+          <select class="form-select  bg-secondary text-light border-dark" class="job" required>
+            <option value="">Choose...</option>
+            <option>Vanya</option>
+            <option>Sharof</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a your job title.
+          </div>
+        </div>
+
+        <hr class="my-4">
+
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="firstName" class="form-label">Name</label>
+          <input type="text" class="form-control  bg-secondary text-light border-dark" id="firstName" placeholder="" value="" required>
+          <div class="invalid-feedback">
+            Valid name is required.
+          </div>
+        </div>
+
+        <div class="col-6">
+          <label for="username" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control  bg-secondary text-light border-dark" id="username" placeholder="Username" required>
+          <div class="invalid-feedback">
+              Your username is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="email" class="form-label">Password</label>
+          <input type="password" class="form-control bg-secondary text-light border-dark" id="password" placeholder="Password">
+          <div class="invalid-feedback">
+            Please enter new password.
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <label for="country" class="form-label">Job title</label>
+          <select class="form-select  bg-secondary text-light border-dark" class="job" required>
+            <option value="">Choose...</option>
+            <option>Technic</option>
+            <option>Mechanic</option>
+            <option>Professional</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a your job title.
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="zip" class="form-label">Salary</label>
+          <input type="number" class="form-control  bg-secondary text-light border-dark" id="salary" placeholder="$0.00" required>
+        </div>
+
+        <div class="col-md-4">
+          <label for="image" class="form-label">Photo</label>
+          <input type="file" class="form-control d-block w-100  bg-secondary text-light border-dark" id="image" placeholder="$0.00" required>
+        </div>
+
+      </div>
+
+      <hr class="my-4">
+
+      <button class="w-40 btn btn-primary btn-lg bg-primary border-primary" type="submit">Edit</button>
+      <button class="w-40 btn btn-primary btn-lg bg-danger border-danger" type="submit">Delete</button>
+    </form>
+  </div>
+  <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+
+  </div>
+</div>
+
+
+<!-- Полная структура модального окна -->
+<div class="modal fade" id="iModal" tabindex="-1" aria-labelledby="iModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content  bg-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="iModalLabel">Popover in a modal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <table class="table table-dark table-striped .table-truncate" style="text-align: center">
+        <thead>
+          <tr class="text-warning">
+            <th>Vanya</th>
+          </tr>
+          <tr class="text-info">
+            <th>#</th>
+            <th>Date</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Total</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>11-15</td>
+            <td class="text-truncate" style="max-width: 40px;">08:35</td>
+            <td class="text-truncate" style="max-width: 50px;">15:20</td>
+            <td>7</td>
+            <td>$147</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>11-16</td>
+            <td class="text-truncate" style="max-width: 40px;">09:10</td>
+            <td class="text-truncate" style="max-width: 50px;">14:30</td>
+            <td>6</td>
+            <td>$775</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+          </div>
+        </div>
+      </main>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017–2021 Mahmadiyarov</p>
+      </footer>
+    </div>
+
+    <!-- Подключение скриптов Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://logiCCyber.github.io/mahmadiyarov/js/form-validation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+.wrapper {
+  height: 100vh;
+}
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.authen {
+  padding: 0 25px 0 25px;
+  width: 500px;
+  height: 400px;
+}
+/* Для неактивных вкладок */
+.nav-link.active {
+  background-color: #17a2b8; /* bg-info */
+  color: white; /* text-info */
+}
